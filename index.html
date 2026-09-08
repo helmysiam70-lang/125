@@ -57,7 +57,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: #0d0e12; /* لون داكن صلب يمنع تسريب ما تحته */
+      background-color: #0d0e12;
       background-image: 
         linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
@@ -213,25 +213,27 @@
       60% { transform: translateX(calc(-50% + 3px)); }
     }
 
-    /* ==================== MOBILE RESPONSIVE (SPLASH) ==================== */
+    /* ==================== MOBILE RESPONSIVE (SPLASH FIX) ==================== */
     @media (max-width: 900px) {
       .splash-screen {
-        padding: 20px 15px 15px;
+        padding: 15px 15px 10px;
         background-size: 25px 25px;
       }
 
       .splash-container {
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         height: 100%;
+        gap: 0;
       }
 
       .splash-text-side {
         align-items: center;
-        padding-top: 15px;
+        padding-top: 10px;
         z-index: 5;
+        flex-shrink: 0;
       }
 
       .year-badge {
@@ -255,6 +257,7 @@
         font-size: 0.85rem;
       }
 
+      /* رفع قاعدة الصورة وتفريغ مساحة تحتها */
       .splash-image-side {
         width: 100%;
         flex: 1;
@@ -263,15 +266,16 @@
         align-items: flex-end;
         position: relative;
         overflow: hidden;
-        margin-bottom: 65px;
+        margin-bottom: 95px;
       }
 
       .transparent-profile-img {
-        max-height: 48vh;
+        max-height: 42vh;
       }
 
+      /* رفع زر السهم ليكون ظاهراً بالكامل أمام العين فوراً */
       .enter-btn {
-        bottom: 18px;
+        bottom: 35px;
         width: 48px;
         height: 48px;
         font-size: 1.1rem;
@@ -778,10 +782,29 @@
       <h2>Social Media Designs</h2>
     </section>
 
-    <!-- PROJECTS SECTION (14 Projects) -->
+    <!-- PROJECTS SECTION (15 Projects) -->
     <section class="projects-section">
 
-      <!-- PROJECT 1 -->
+      <!-- PROJECT 1: PIONEER IFM (NEWEST CAMPAIGN) -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Pioneer IFM Official Campaign</h3>
+          <p>Brand Strategy, Creative Artwork & Visual Direction</p>
+        </div>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="slide active" data-index="0"><img src="images/pioneer-1.webp" alt="Pioneer IFM 1"></div>
+            <div class="slide next" data-index="1"><img src="images/pioneer-2.webp" alt="Pioneer IFM 2"></div>
+            <div class="slide prev" data-index="2"><img src="images/pioneer-3.webp" alt="Pioneer IFM Mockup"></div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Nokia 3310 Campaign Vol. 1</h3>
@@ -800,7 +823,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 2 -->
+      <!-- PROJECT 3 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Nokia 3310 Campaign Vol. 2</h3>
@@ -819,7 +842,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 3 -->
+      <!-- PROJECT 4 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Egyptian Workers × Japanese Aesthetics</h3>
@@ -838,7 +861,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 4 -->
+      <!-- PROJECT 5 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Enhancing Alpha Animica Visual Identity</h3>
@@ -857,7 +880,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 5 -->
+      <!-- PROJECT 6 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Blood Donation Campaign</h3>
@@ -876,7 +899,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 6 -->
+      <!-- PROJECT 7 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Ancient Greek X Greek Yoghurt From Nada Dairy</h3>
@@ -895,7 +918,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 7 -->
+      <!-- PROJECT 8 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Creative Visuals Vol. 1</h3>
@@ -914,7 +937,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 8 -->
+      <!-- PROJECT 9 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Creative Visuals Vol. 2</h3>
@@ -933,7 +956,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 9 -->
+      <!-- PROJECT 10 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Pixel Art Infographics</h3>
@@ -952,7 +975,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 10 -->
+      <!-- PROJECT 11 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Naseem Flowers AI Photography Session</h3>
@@ -971,7 +994,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 11 -->
+      <!-- PROJECT 12 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Clothes Donation Campaign</h3>
@@ -990,7 +1013,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 12 -->
+      <!-- PROJECT 13 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Little To You Life To Them Awareness Campaign</h3>
@@ -1009,7 +1032,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 13 -->
+      <!-- PROJECT 14 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Rest Cafe</h3>
@@ -1028,7 +1051,7 @@
         </div>
       </div>
 
-      <!-- PROJECT 14 -->
+      <!-- PROJECT 15 -->
       <div class="project-card">
         <div class="project-header">
           <h3>Oceancare Pet Clinic</h3>
@@ -1088,7 +1111,6 @@
       splashScreen.classList.add('swipe-left');
       document.body.classList.remove('no-scroll');
       
-      // إخفاء الـ splash نهائياً من الـ DOM لمنع أي تداخل بصري
       setTimeout(() => {
         splashScreen.style.display = 'none';
       }, 850);
